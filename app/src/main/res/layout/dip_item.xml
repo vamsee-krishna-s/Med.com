@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="1dp"
+    android:elevation="20dp"
+    app:cardCornerRadius="15sp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="2sp">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BCEFEB"
+        >
+
+        <TextView
+            android:id="@+id/personName"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fontFamily="serif"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="Name of the person"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/AddressText"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personName"
+            android:ellipsize="marquee"
+            android:maxLines="2"
+            android:padding="15dp"
+            android:text="address"
+            android:textSize="10sp"
+            android:layout_marginLeft="5dp"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/AddressText"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="75dp"
+            android:background="#330612" />
+
+        <TextView
+            android:id="@+id/locationN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:padding="10sp"
+            android:text="Location"
+            android:textSize="12sp"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="74dp"
+            android:backgroundTint="#FA0000"
+            app:icon="@android:drawable/ic_delete"
+            app:iconGravity="textStart" />
+
+        <Button
+            android:id="@+id/ContactNumber"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="#2D713B"
+            app:icon="@android:drawable/stat_sys_phone_call" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

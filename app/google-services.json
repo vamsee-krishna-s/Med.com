@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "324022839112",
+    "project_id": "med-com-a931c",
+    "storage_bucket": "med-com-a931c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324022839112:android:4f895de3aacd91e553757d",
+        "android_client_info": {
+          "package_name": "com.Vamsee.medcom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324022839112-7rb9aj9j08c27jv3lpmka0ep76p4tgrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7N2F9dwgyOVyIP-yTzykg_DJUBo7PRhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324022839112-7rb9aj9j08c27jv3lpmka0ep76p4tgrb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

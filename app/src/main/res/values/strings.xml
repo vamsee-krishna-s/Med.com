@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Med.com</string>
+    <string name="contribute_data">CONTRIBUTE DATA</string>
+    <string name="title_activity_contribute">Contribute</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_contri">contri_Activity</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="city">City</string>
+    <string name="submit">SUBMIT</string>
+    <string name="details">Details</string>
+    <string name="address">Address</string>
+    <string name="contact_number">Mobile Number</string>
+    <string name="name_of_store_or_person">Name of Store or Person</string>
+    <string name="name_of_resource">Resource type</string>
+    <string name="contribute_data4">CONTRIBUTE DATA</string>
+    <string-array name="resource_drop">
+       <item>
+            Remdesivir, Favipiravir, Fabiflu, Tocilizumab
+        </item>
+        <item>
+            equipment /Blood/Plasma etc
+        </item>
+        <item>
+            dignostics, ct scan,Doctors
+        </item>
+    </string-array>
+    <string name="title_activity_medicine">Medicine</string>
+    <string name="retry" />
+    <string name="data_not_available" />
+    <string name="app_info">Your details have been submitted.</string>
+</resources>
