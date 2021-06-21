@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SearchView;
 
 import com.google.firebase.firestore.DocumentChange;
@@ -74,4 +75,8 @@ public class Service extends AppCompatActivity {
                 });
     }
 
+    public void cont(View view) {
+        Intent intent= new Intent(this, contri_Activity.class);
+        startActivity(intent);
+    }
 }

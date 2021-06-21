@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
@@ -70,4 +72,8 @@ public class equipment extends AppCompatActivity {
                 });
     }
 
+    public void cont(View view) {
+        Intent intent= new Intent(this, contri_Activity.class);
+        startActivity(intent);
+    }
 }

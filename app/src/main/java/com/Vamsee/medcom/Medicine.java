@@ -1,7 +1,9 @@
 package com.Vamsee.medcom;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -68,5 +70,10 @@ public class Medicine extends AppCompatActivity {
 
                     }
                 });
+    }
+
+    public void cont(View view) {
+        Intent intent= new Intent(this, contri_Activity.class);
+        startActivity(intent);
     }
 }
