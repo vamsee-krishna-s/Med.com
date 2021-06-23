@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -12,13 +13,10 @@
     app:strokeColor="@color/black"
     app:strokeWidth="2sp">
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#BCEFEB"
-        >
+        android:background="#BCEFEB">
 
         <TextView
             android:id="@+id/personName"
@@ -53,7 +51,7 @@
             android:layout_below="@+id/AddressText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="75dp"
-            android:background="#330612" />
+            android:background="#330612"/>
 
         <TextView
             android:id="@+id/locationN"
@@ -66,14 +64,14 @@
             android:layout_marginLeft="20dp"/>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/reportBtn"
             android:layout_width="30dp"
             android:layout_height="40dp"
             android:layout_marginLeft="310dp"
             android:layout_marginTop="74dp"
             android:backgroundTint="#FA0000"
             app:icon="@android:drawable/ic_delete"
-            app:iconGravity="textStart" />
+            app:iconGravity="textStart"/>
 
         <Button
             android:id="@+id/ContactNumber"
@@ -84,8 +82,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginRight="50dp"
             android:backgroundTint="#2D713B"
-            app:icon="@android:drawable/stat_sys_phone_call" />
-
+            app:icon="@android:drawable/stat_sys_phone_call"/>
     </RelativeLayout>
 
 </com.google.android.material.card.MaterialCardView>

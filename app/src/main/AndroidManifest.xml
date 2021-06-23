@@ -9,10 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Medcom">
-        <activity
-            android:name=".Service">
-
-        </activity>
+        <activity android:name=".report"></activity>
+        <activity android:name=".Service"></activity>
         <activity android:name=".equipment" />
         <activity
             android:name=".Medicine"

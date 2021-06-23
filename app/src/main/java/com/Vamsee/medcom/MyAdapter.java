@@ -1,16 +1,14 @@
 package com.Vamsee.medcom;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Filter;
-import android.widget.Filterable;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -18,16 +16,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     Context context;
     ArrayList<Medicine_Collection> medicineArrayList;
 
-
     public MyAdapter(Context context, ArrayList<Medicine_Collection> medicineArrayList) {
         this.context = context;
         this.medicineArrayList = medicineArrayList;
-    }
 
+    }
 
     @Override
     public int getItemCount() {
         return medicineArrayList.size();
+
     }
 
     @NotNull
@@ -36,6 +34,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         View v = LayoutInflater.from(context).inflate(R.layout.dip_item,parent,false);
         return new MyViewHolder(v);
+
     }
 
     @Override
@@ -48,18 +47,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.City.setText(medicine_collection.City);
     }
 
-
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView Address, City, Mobile, Name;
+        TextView Address, City, Name;
+        Button Mobile, rep;
         public MyViewHolder(@NotNull View itemView) {
             super(itemView);
             Address = itemView.findViewById(R.id.AddressText);
             City = itemView.findViewById(R.id.locationN);
             Mobile = itemView.findViewById(R.id.ContactNumber);
             Name = itemView.findViewById(R.id.personName);
-
+            rep = itemView.findViewById(R.id.reportBtn);
 
 
         }
+
     }
+
 }
