@@ -41,6 +41,7 @@ public class contri_Activity extends AppCompatActivity {
     TextInputLayout details,  StateCity, address_id_ed_1, mob_id_ed, Name_id_ed, resourceName;
     Button bnt_for_creation;
     FirebaseFirestore fbfs;
+    AutoCompleteTextView dropperOR;
 
 
 
@@ -51,7 +52,7 @@ public class contri_Activity extends AppCompatActivity {
 
         fbfs=FirebaseFirestore.getInstance();
 
-        AutoCompleteTextView dropperOR= findViewById(R.id.dropperOR);
+        dropperOR = findViewById(R.id.dropperOR);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, res);
         dropperOR.setAdapter(adapter);
 
@@ -67,7 +68,6 @@ public class contri_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 fbfs=FirebaseFirestore.getInstance();
-
 
                 String Resource = dropperOR.getText().toString();
                 String mobile = mob_id_ed.getEditText().getText().toString();

@@ -4,7 +4,15 @@ public class Medicine_Collection {
 
     String Address, City,Details, Mobile, Name, Resource;
 
+    String PName, Multiline, Phone;
+
     public Medicine_Collection() {}
+
+    public Medicine_Collection(String PName, String multiline, String phone) {
+        this.PName = PName;
+        Multiline = multiline;
+        Phone = phone;
+    }
 
     public Medicine_Collection(String address, String city, String details, String mobile, String name, String resource) {
         Address = address;
@@ -13,6 +21,30 @@ public class Medicine_Collection {
         Mobile = mobile;
         Name = name;
         Resource = resource;
+    }
+
+    public String getPName() {
+        return PName;
+    }
+
+    public void setPName(String PName) {
+        this.PName = PName;
+    }
+
+    public String getMultiline() {
+        return Multiline;
+    }
+
+    public void setMultiline(String multiline) {
+        Multiline = multiline;
+    }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(String phone) {
+        Phone = phone;
     }
 
     public String getAddress() {

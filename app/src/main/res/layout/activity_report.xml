@@ -7,7 +7,7 @@
     tools:context=".report">
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/MultiLine"
         android:layout_width="367dp"
         android:layout_height="404dp"
         android:layout_marginBottom="16dp"
@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/PersonName"
         android:layout_width="317dp"
         android:layout_height="48dp"
         android:layout_marginTop="56dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Numb"
         android:layout_width="233dp"
         android:layout_height="39dp"
         android:layout_marginTop="12dp"
@@ -50,5 +50,5 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/PersonName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

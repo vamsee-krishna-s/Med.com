@@ -44,7 +44,7 @@
             android:textSize="10sp"
             android:layout_marginLeft="5dp"/>
 
-        <View
+        <TextView
             android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="2dp"
