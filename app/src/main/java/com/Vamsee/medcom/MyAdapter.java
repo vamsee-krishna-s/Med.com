@@ -1,17 +1,14 @@
 package com.Vamsee.medcom;
 
-import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.core.content.ContextCompat;
-import androidx.core.content.PermissionChecker;
 import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
@@ -52,8 +49,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.rep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v ) {
-                Intent intent = new Intent(v.getContext(), report.class);
+                String str = medicine_collection.Mobile;
 
+
+                
+                Intent intent = new Intent(v.getContext(), report.class);
+                intent.putExtra("Key",str);
                 context.startActivity(intent);
             }
         });
@@ -61,7 +62,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v ) {
+                String no = medicine_collection.Mobile;
 
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:"+no));
+                context.startActivity(intent);
             }
         });
     }

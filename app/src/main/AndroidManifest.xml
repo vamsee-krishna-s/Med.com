@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.Vamsee.medcom">
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -9,9 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Medcom">
-        <activity android:name=".report"></activity>
-        <activity android:name=".Service"></activity>
-        <activity android:name=".equipment" />
+        <activity android:name=".report"/>
+        <activity android:name=".Service"/>
+        <activity android:name=".equipment"/>
         <activity
             android:name=".Medicine"
             android:label="@string/title_activity_medicine"

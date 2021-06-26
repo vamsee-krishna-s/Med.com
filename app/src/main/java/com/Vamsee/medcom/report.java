@@ -2,6 +2,7 @@ package com.Vamsee.medcom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,9 @@ public class report extends AppCompatActivity {
         Multilin = findViewById(R.id.MultiLine);
         Pone = findViewById(R.id.Numb);
         Save = (Button) findViewById(R.id.SaveBtn);
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("Key");
+        Pone.setText(str);
 
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,9 +46,14 @@ public class report extends AppCompatActivity {
 
                 Medicine_Collection med = new Medicine_Collection(PName, Multiline, Phone);
                 ref.child(PName).setValue(med);
+                Intent it1 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(it1);
+
+
 
             }
         });
         
     }
+
 }
