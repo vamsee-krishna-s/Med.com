@@ -15,8 +15,7 @@
         <activity android:name=".equipment"/>
         <activity
             android:name=".Medicine"
-            android:label="@string/title_activity_medicine"
-            android:theme="@style/Theme.Medcom.NoActionBar" />
+            android:label="@string/title_activity_medicine"/>
         <activity
             android:name=".contri_Activity"
             android:label="@string/title_activity_contri"
