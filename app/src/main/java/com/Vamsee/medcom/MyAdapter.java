@@ -7,25 +7,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> implements Filterable{
     Context context;
     ArrayList<Medicine_Collection> medicineArrayList;
+    ArrayList<Medicine_Collection> filterlist;
     public MyAdapter(Context context, ArrayList<Medicine_Collection> medicineArrayList) {
         this.context = context;
         this.medicineArrayList = medicineArrayList;
-
+        this.filterlist = medicineArrayList;
     }
 
     @Override
     public int getItemCount() {
         return medicineArrayList.size();
-
     }
 
     @NotNull
@@ -69,6 +71,46 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 context.startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public Filter getFilter() {
+
+        Filter mfilter = new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                String charString = constraint.toString();
+
+                if (charString.isEmpty()) {
+
+                    filterlist = medicineArrayList;
+                } else {
+
+                    ArrayList<Medicine_Collection> filteredList = new ArrayList<>();
+
+                    for (Medicine_Collection androidVersion : medicineArrayList) {
+
+                        if (androidVersion.getCity().toLowerCase().contains(charString) || androidVersion.getName().toLowerCase().contains(charString)) {
+
+                            filteredList.add(androidVersion);
+                        }
+                    }
+
+                    filterlist = filteredList;
+                }
+
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = filterlist;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+
+            }
+        };
+
+        return mfilter;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

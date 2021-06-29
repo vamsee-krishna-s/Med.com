@@ -10,6 +10,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -52,7 +53,6 @@ public class Medicine extends AppCompatActivity {
 
     private void EventChangeListener() {
 
-
         db.collection("Medicine_Collection")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
@@ -89,10 +89,17 @@ public class Medicine extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                return false;
+                myAdapter.getFilter().filter(newText);
+                return true;
             }
         });
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void cont(View view) {
