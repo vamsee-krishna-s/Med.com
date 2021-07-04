@@ -89,7 +89,8 @@ public class equipment extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                return false;
+
+                return true;
             }
         });
         return super.onCreateOptionsMenu(menu);

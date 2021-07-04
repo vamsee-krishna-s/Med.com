@@ -89,18 +89,13 @@ public class Medicine extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                myAdapter.getFilter().filter(newText);
+
                 return true;
             }
         });
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        return super.onOptionsItemSelected(item);
-    }
 
     public void cont(View view) {
         Intent intent= new Intent(this, contri_Activity.class);
