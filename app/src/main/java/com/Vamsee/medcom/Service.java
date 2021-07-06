@@ -88,7 +88,7 @@ public class Service extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
+                myAdapter.getFilter().filter(newText);
                 return true;
             }
         });

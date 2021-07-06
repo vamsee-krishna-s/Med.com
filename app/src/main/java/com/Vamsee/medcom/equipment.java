@@ -89,7 +89,7 @@ public class equipment extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
+                myAdapter.getFilter().filter(newText);
                 return true;
             }
         });

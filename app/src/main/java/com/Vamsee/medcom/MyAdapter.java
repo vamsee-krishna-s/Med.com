@@ -15,15 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> implements Filterable
 {
     Context context;
     ArrayList<Medicine_Collection> medicineArrayList;
-
+    ArrayList<Medicine_Collection> backup;
     public MyAdapter(Context context, ArrayList<Medicine_Collection> medicineArrayList) {
         this.context = context;
         this.medicineArrayList = medicineArrayList;
-
+        backup = new ArrayList<>(medicineArrayList);
     }
 
 
@@ -75,7 +75,36 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
         });
     }
 
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
 
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence keyword) {
+            ArrayList<Medicine_Collection> filtereddata = new ArrayList<>();
+
+             if (keyword.toString().isEmpty())
+                 filtereddata.addAll(backup);
+             else {
+                 for(Medicine_Collection obj : backup){
+                     if(obj.getCity().toString().toLowerCase().contains(keyword.toString().toLowerCase()))
+                         filtereddata.add(obj);
+                 }
+             }
+             FilterResults results = new FilterResults();
+             results.values=filtereddata;
+             return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+             medicineArrayList.clear();
+             medicineArrayList.addAll((ArrayList<Medicine_Collection>)results.values);
+             notifyDataSetChanged();
+        }
+    };
 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
