@@ -89,7 +89,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
                  filtereddata.addAll(backup);
              else {
                  for(Medicine_Collection obj : backup){
-                     if(obj.getCity().toString().toLowerCase().contains(keyword.toString().toLowerCase()))
+                     if(obj.getCity().toString().toLowerCase()
+                             .contains(keyword.toString().toLowerCase()))
                          filtereddata.add(obj);
                  }
              }

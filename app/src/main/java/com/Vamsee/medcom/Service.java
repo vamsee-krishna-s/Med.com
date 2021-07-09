@@ -56,7 +56,8 @@ public class Service extends AppCompatActivity {
         db.collection("Service_Collection")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
-                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable QuerySnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
+                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable QuerySnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error)
+                    {
                         if(error!= null){
                             Log.e("Firestore ERROR", "onEvent: ");
                             return;
@@ -88,8 +89,8 @@ public class Service extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                myAdapter.getFilter().filter(newText);
-                return true;
+                //myAdapter.getFilter().filter(newText);
+                return false;
             }
         });
         return super.onCreateOptionsMenu(menu);
